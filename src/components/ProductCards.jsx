@@ -51,7 +51,7 @@ const ProductsShowcase = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div id='products' className="min-h-screen bg-white">
         <Ellipse/>
       <div className="max-w-7xl mx-auto p-8">
         <div className="text-center mb-12">

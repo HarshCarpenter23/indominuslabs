@@ -1,5 +1,6 @@
 import React from "react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import { useNavigate } from "react-router-dom";
 
 const WavePattern = () => (
   <div className="absolute inset-0 w-full h-full z-0">
@@ -22,6 +23,9 @@ const Ellipse = () => (
 );
 
 const Landing = () => {
+
+    const navigate = useNavigate();
+
   return (
     <div className="relative min-h-screen bg-white overflow-hidden">
       {/* Background Vector Pattern */}
@@ -37,11 +41,49 @@ const Landing = () => {
               Empowering the Future of Digital Security with <br /> Innovative,
               Compliant, and Seamless Solutions for a Connected World.
             </h1>
-            <div className="flex justify-start">
+            {/* <div className="flex justify-start">
               <button className="inline-flex px-9 py-3 border font-bold rounded-full text-[#7203FE] border-[#7203FE] hover:bg-[#7203FE] hover:text-white transition-colors purple-shadow duration-300">
                 Learn More
               </button>
+            </div> */}
+            <div className="buttons flex justify-center md:justify-start h-[60px]">
+              <button className="blob-btn purple-shadow h-full" onClick={(()=> {navigate('/schedule-demo')})}>
+                Learn More
+                <span className="blob-btn__inner">
+                  <span className="blob-btn__blobs">
+                    <span className="blob-btn__blob"></span>
+                    <span className="blob-btn__blob"></span>
+                    <span className="blob-btn__blob"></span>
+                    <span className="blob-btn__blob"></span>
+                  </span>
+                </span>
+              </button>
+              <br />
+
+              {/* <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <defs>
+                  <filter id="goo">
+                    <feGaussianBlur
+                      in="SourceGraphic"
+                      result="blur"
+                      stdDeviation="10"
+                    ></feGaussianBlur>
+                    <feColorMatrix
+                      in="blur"
+                      mode="matrix"
+                      values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+                      result="goo"
+                    ></feColorMatrix>
+                    <feBlend
+                      in2="goo"
+                      in="SourceGraphic"
+                      result="mix"
+                    ></feBlend>
+                  </filter>
+                </defs>
+              </svg> */}
             </div>
+            
           </div>
 
           {/* Right Column - Lottie Animation */}

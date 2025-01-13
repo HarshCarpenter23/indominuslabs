@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Mail, User, Phone, MessageSquare, Send, ArrowRight } from 'lucide-react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
-const ContactPage = () => {
+const ScheduleDemo = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -116,4 +116,4 @@ const ContactPage = () => {
   );
 };
 
-export default ContactPage;
+export default ScheduleDemo;
