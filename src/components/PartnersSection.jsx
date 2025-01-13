@@ -3,7 +3,7 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const PartnersSection = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white px-4 pb-12">
+    <div className="min-h-screen flex items-center justify-center bg-white md:px-4 pb-12">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Left Image Section */}
