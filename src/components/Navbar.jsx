@@ -59,22 +59,22 @@ const Navbar = () => {
           </div>
 
           {/* Desktop navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-9">
             <a
               href="/"
               onClick={handleHomeClick}
-              className="text-gray-800 hover:text-gray-600"
+              className="text-gray-800 hover:text-gray-600 font-semibold text-lg"
             >
               Home
             </a>
             <a
               href="/#products"
               onClick={handleProductsClick}
-              className="text-gray-800 hover:text-gray-600"
+              className="text-gray-800 hover:text-gray-600 font-semibold text-lg"
             >
               Products
             </a>
-            <a href="/contact" className="text-gray-800 hover:text-gray-600">
+            <a href="/#contact" className="text-gray-800 hover:text-gray-600 font-semibold text-lg">
               Contact Us
             </a>
             {/* <button 
@@ -85,7 +85,7 @@ const Navbar = () => {
             </button> */}
             <div className="wrapper">
   <a className="cta" href="/schedule-demo">
-    <span className="cta-text">SCHEDULE DEMO</span>
+    <span className="cta-text font-semibold">SCHEDULE DEMO</span>
     <span className="cta-arrow">
       <svg
         width="20px"
@@ -148,7 +148,7 @@ const Navbar = () => {
               Products
             </a>
             <a
-              href="/contact"
+              href="/#contact"
               className="block px-3 py-2 text-gray-800 hover:text-gray-600"
             >
               Contact Us

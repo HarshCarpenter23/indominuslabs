@@ -13,7 +13,7 @@ const Ellipse = () => (
   
 
 const ProductCard = ({ title, description }) => (
-  <div className="relative bg-white rounded-3xl shadow-lg p-8 h-64 w-full md:w-96 overflow-hidden transform transition-all duration-500 hover:scale-105">
+  <div className="relative bg-white rounded-3xl shadow-xl p-8 h-64 w-full md:w-96 overflow-hidden transform transition-all duration-500 hover:scale-105">
     <div className="relative z-10 h-full flex flex-col justify-between">
       <div>
         <h3 className="text-purple-600 text-xl font-bold mb-4">{title}</h3>
@@ -54,7 +54,7 @@ const ProductsShowcase = () => {
     <div id='products' className="min-h-screen bg-white">
         <Ellipse/>
       <div className="max-w-7xl mx-auto p-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 z-100">
           <h2 className="text-sm uppercase tracking-wider mb-2">PRODUCTS</h2>
           <h1 className="text-3xl md:text-4xl font-bold">
             Powerful Modules, Powerful Solutions

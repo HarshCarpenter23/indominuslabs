@@ -1,13 +1,17 @@
 import React from "react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import { useNavigate } from "react-router-dom";
 
 const WebSolutionsSection = () => {
+
+    const navigate = useNavigate();
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white">
+    <div className="min-h-screen flex items-center justify-center bg-white mt-2 pt-4">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 ">
-        <div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-8 lg:gap-20">
+        <div className="flex flex-col-reverse lg:flex-row justify-center gap-8 lg:gap-20">
           {/* Left Content */}
-          <div className="lg:w-1/2 space-y-6 max-w-xl">
+          <div className="lg:w-1/2 space-y-6 max-w-xl pt-4 mx-auto">
             <div className="space-y-2">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
                 How Do We Provide
@@ -39,7 +43,7 @@ const WebSolutionsSection = () => {
               Get Started
             </button> */}
             <div class="buttons">
-              <button class="blob-btn">
+              <button class="blob-btn" onClick={(()=> {navigate('/schedule-demo')})}>
                 Get Started
                 <span class="blob-btn__inner">
                   <span class="blob-btn__blobs">
@@ -78,13 +82,16 @@ const WebSolutionsSection = () => {
           </div>
 
           {/* Right Image */}
-          <div className="lg:w-1/2 flex justify-center items-center">
-            <DotLottieReact
-              src="https://lottie.host/0d60fcb2-2f00-4152-8cee-0108bdd35b4c/FSjisjZr7m.lottie"
-              loop
-              autoplay
-            />
-          </div>
+          <div className="w-full max-w-[400px] lg:w-1/2 mx-auto relative">
+  <div className="aspect-square w-full mx-auto flex justify-center items-center">
+    <DotLottieReact
+      src="https://lottie.host/0d60fcb2-2f00-4152-8cee-0108bdd35b4c/FSjisjZr7m.lottie"
+      loop
+      autoplay
+      className="w-full h-full object-contain"
+    />
+  </div>
+</div>
         </div>
       </div>
     </div>

@@ -1,19 +1,23 @@
 import React from "react";
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import ShinyButton from "./ShinyButton";
 
 const PartnersSection = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white md:px-4 pb-12">
+    <div className="min-h-screen flex items-center justify-center bg-white px-4 pb-12">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Left Image Section */}
-          <div className="lg:w-1/2">
-            <DotLottieReact
-              src="https://lottie.host/87ba02eb-9a54-435b-9e48-6fe34dacfa9e/gO40BqcPun.lottie"
-              loop
-              autoplay
-            />
-          </div>
+          <div className="w-full max-w-[500px] lg:w-1/2 mx-auto relative">
+            <div className="aspect-square w-full">
+                <DotLottieReact
+                src="https://lottie.host/87ba02eb-9a54-435b-9e48-6fe34dacfa9e/gO40BqcPun.lottie"
+                loop
+                autoplay
+                className="w-full h-full object-contain scale-105"
+                />
+            </div>
+            </div>
 
           {/* Right Content Section */}
           <div className="lg:w-1/2 space-y-6">
@@ -54,9 +58,10 @@ const PartnersSection = () => {
               <button className="px-8 py-3 border border-[#7203FE] text-[#7203FE] font-semibold rounded-full transition-colors duration-300 purple-shadow hover:bg-[#7203FE] hover:text-white">
                 View Partners
               </button>
-              <button className="px-8 py-3 bg-purple-600 text-white font-semibold rounded-full hover:bg-purple-700 transition-colors duration-300 shadow-xl hover:bg-white hover:text-[#7203FE] hover:border hover:border-[#7203FE]">
+              {/* <button className="px-8 py-3 bg-purple-600 text-white font-semibold rounded-full hover:bg-purple-700 transition-colors duration-300 shadow-xl hover:bg-white hover:text-[#7203FE] hover:border hover:border-[#7203FE]">
                 Schedule Demo
-              </button>
+              </button> */}
+              <ShinyButton/>
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { useNavigate } from "react-router-dom";
+import { TypeAnimation } from 'react-type-animation';
 
 const WavePattern = () => (
   <div className="absolute inset-0 w-full h-full z-0">
@@ -13,41 +14,44 @@ const WavePattern = () => (
 );
 
 const Ellipse = () => (
-  <div className="absolute bottom-0 right-0 w-full h-full z-0">
-    <img
-      src="/Ellipse5.png"
-      alt="Wave Pattern"
-      className="object-contain bottom-0 right-0"
-    />
-  </div>
-);
+    <div className="absolute hidden lg:block bottom-0 right-0 w-full h-full z-0">
+      <img
+        src="/Ellipse5.png"
+        alt="Wave Pattern"
+        className="object-contain bottom-0 right-0"
+      />
+    </div>
+  );
+  
 
 const Landing = () => {
-
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <div className="relative min-h-screen bg-white overflow-hidden">
-      {/* Background Vector Pattern */}
       <WavePattern />
-      <Ellipse />
+      <Ellipse/>
 
-      {/* Content Container */}
       <div className="relative z-10 mx-2 px-4 sm:px-6 lg:px-8 pt-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 justify-between w-full">
-          {/* Left Column - Text Content */}
-          <div className="space-y-8 pt-16 pl-8">
-            <h1 className="text-xl md:text-2xl font-bold leading-tight text-gray-900 text-left">
-              Empowering the Future of Digital Security with <br /> Innovative,
-              Compliant, and Seamless Solutions for a Connected World.
-            </h1>
-            {/* <div className="flex justify-start">
-              <button className="inline-flex px-9 py-3 border font-bold rounded-full text-[#7203FE] border-[#7203FE] hover:bg-[#7203FE] hover:text-white transition-colors purple-shadow duration-300">
-                Learn More
-              </button>
-            </div> */}
+          <div className="space-y-8 md:pt-16 md:pl-8">
+            <div className="text-2xl md:text-3xl font-bold leading-tight text-gray-900 text-left">
+              <TypeAnimation
+                sequence={[
+                  'Empowering the Future of Digital Security with Innovative, Compliant, and Seamless Solutions for a Connected World.',
+                  1000,
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={0}
+                cursor={true}
+              />
+            </div>
             <div className="buttons flex justify-center md:justify-start h-[60px]">
-              <button className="blob-btn purple-shadow h-full" onClick={(()=> {navigate('/schedule-demo')})}>
+              <button 
+                className="blob-btn purple-shadow h-full" 
+                onClick={() => navigate('/schedule-demo')}
+              >
                 Learn More
                 <span className="blob-btn__inner">
                   <span className="blob-btn__blobs">
@@ -58,55 +62,16 @@ const Landing = () => {
                   </span>
                 </span>
               </button>
-              <br />
-
-              {/* <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-                <defs>
-                  <filter id="goo">
-                    <feGaussianBlur
-                      in="SourceGraphic"
-                      result="blur"
-                      stdDeviation="10"
-                    ></feGaussianBlur>
-                    <feColorMatrix
-                      in="blur"
-                      mode="matrix"
-                      values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
-                      result="goo"
-                    ></feColorMatrix>
-                    <feBlend
-                      in2="goo"
-                      in="SourceGraphic"
-                      result="mix"
-                    ></feBlend>
-                  </filter>
-                </defs>
-              </svg> */}
             </div>
-            
           </div>
 
-          {/* Right Column - Lottie Animation */}
-          <div className="relative w-full h-full">
-            <div className="w-full h-full">
-              <DotLottieReact
-                src="https://lottie.host/6932b164-3d7b-43b1-8122-f459ffef6698/a7uLHCXwru.lottie"
-                loop
-                autoplay
-                className="w-full h-full"
-              />
-            </div>
-            {/* Decorative Stars */}
-            {/* <div className="absolute top-0 right-0 transform -translate-y-8 translate-x-4">
-              <svg className="w-8 h-8 text-yellow-400" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M12 2L14 8H20L15 12L17 18L12 14L7 18L9 12L4 8H10L12 2Z" />
-              </svg>
-            </div>
-            <div className="absolute top-4 right-12">
-              <svg className="w-6 h-6 text-yellow-400" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M12 2L14 8H20L15 12L17 18L12 14L7 18L9 12L4 8H10L12 2Z" />
-              </svg>
-            </div> */}
+          <div className="relative w-full h-[300px] md:h-[400px] lg:h-[450px] mt-8 lg:mt-0">
+            <DotLottieReact
+              src="https://lottie.host/6932b164-3d7b-43b1-8122-f459ffef6698/a7uLHCXwru.lottie"
+              loop
+              autoplay
+              className="w-full h-full object-contain"
+            />
           </div>
         </div>
       </div>
