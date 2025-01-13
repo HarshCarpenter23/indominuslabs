@@ -1,19 +1,17 @@
 import React from "react";
 
 const Ellipse = () => (
-    <div className="absolute w-full h-full z-0">
-      <img
-        src="/Ellipse23.png"
-        alt="Wave Pattern"
-        className="object-contain"
-      />
-    </div>
-  );
-  
-  
+  <div className="absolute w-full h-full z-0">
+    <img
+      src="/Ellipse23.png"
+      alt="Wave Pattern"
+      className="object-contain"
+    />
+  </div>
+);
 
 const ProductCard = ({ title, description }) => (
-  <div className="relative bg-white rounded-3xl shadow-xl p-8 h-64 w-full md:w-96 overflow-hidden transform transition-all duration-500 hover:scale-105">
+  <div className="relative bg-white rounded-3xl shadow-xl p-8 h-64 w-full md:w-96 overflow-hidden transform transition-all duration-500 hover:scale-105 product-shadow">
     <div className="relative z-10 h-full flex flex-col justify-between">
       <div>
         <h3 className="text-purple-600 text-xl font-bold mb-4">{title}</h3>
@@ -51,10 +49,10 @@ const ProductsShowcase = () => {
   ];
 
   return (
-    <div id='products' className="min-h-screen bg-white">
-        <Ellipse/>
-      <div className="max-w-7xl mx-auto p-8">
-        <div className="text-center mb-12 z-100">
+    <div id="products" className="min-h-screen bg-white">
+      <Ellipse />
+      <div className="max-w-7xl mx-auto p-8 relative z-10">
+        <div className="text-center mb-12 z-10">
           <h2 className="text-sm uppercase tracking-wider mb-2">PRODUCTS</h2>
           <h1 className="text-3xl md:text-4xl font-bold">
             Powerful Modules, Powerful Solutions
@@ -76,7 +74,7 @@ const ProductsShowcase = () => {
           </div>
 
           {/* Row 2: Two cards on the right */}
-          <div className="flex flex-col md:flex-row md:justify-end gap-8">
+          <div className="flex flex-col md:flex-row pl-[250px] gap-8">
             <ProductCard
               title={products[2].title}
               description={products[2].description}
