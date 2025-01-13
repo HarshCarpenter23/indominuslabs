@@ -78,13 +78,14 @@ const ReviewCardSlider = () => {
         <div className="mb-8 md:mb-16 text-center md:text-left">
           <h4 className="text-base font-medium text-gray-600 mb-2">Reviews</h4>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Our Customers' Reviews</h2>
-          <p className="text-base md:text-lg text-gray-600 mt-3">
-            Our customers speaking about the value they uncovered with Indominus Labs.
+          <p className="text-base md:text-base text-gray-600 mt-3">
+            Our customers speaking about the value they uncovered with <br /> Indominus Labs...
           </p>
         </div>
 
         {/* Secondary Header */}
         <div className="text-center mb-8 md:mb-16">
+            <img src="/Ellipse-Review.png" alt='Ellipse' className='mx-auto w-[150px]'  />
           <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">What Our Clients Say About Us</h2>
           <div className="flex justify-center space-x-2">
             {[...Array(reviews.length - slidesPerView + 1)].map((_, index) => (

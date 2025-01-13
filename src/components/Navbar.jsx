@@ -49,9 +49,9 @@ const Navbar = () => {
                 onClick={() => navigate("/")}
               >
                 <div className="w-18 h-8">
-                  <img width={"20px"} src="/logo-IL.png" alt="Logo-IL" />
+                  <img width={"25px"} src="/logo-IL.png" alt="Logo-IL" />
                 </div>
-                <span className="text-2xl font-semibold text-transparent bg-gradient-to-r from-[#9E54FB] to-[#8331E8] bg-clip-text ml-2">
+                <span className="text-xl font-semibold text-transparent bg-gradient-to-r from-[#9E54FB] to-[#8331E8] bg-clip-text">
                   INDOMINUS LABS
                 </span>
               </div>

@@ -5,11 +5,11 @@ const WebSolutionsSection = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-white">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 ">
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-20">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-8 lg:gap-20">
           {/* Left Content */}
           <div className="lg:w-1/2 space-y-6 max-w-xl">
             <div className="space-y-2">
-              <h2 className="text-3xl md:text-3xl lg:text-4xl font-bold text-gray-900">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
                 How Do We Provide
               </h2>
               <h2 className="text-3xl md:text-3xl lg:text-4xl font-bold text-[#7203FE]">
@@ -17,7 +17,7 @@ const WebSolutionsSection = () => {
               </h2>
             </div>
 
-            <p className="text-gray-700 leading-relaxed text-base ">
+            <p className="text-gray-700 leading-relaxed lg:text-base text-sm">
               At our company, we provide web-based solutions tailored
               specifically to the needs of doctors, educators, and health
               professionals. With a keen understanding of the complexities
@@ -29,7 +29,7 @@ const WebSolutionsSection = () => {
               needs of our customers
             </p>
 
-            <p className="text-gray-700 leading-relaxed text-base">
+            <p className="text-gray-700 leading-relaxed lg:text-base text-sm">
               Ultimately, our goal is to deliver tailored web-based solutions
               that to achieve objectives in the healthcare, education, and
               health sectors.
