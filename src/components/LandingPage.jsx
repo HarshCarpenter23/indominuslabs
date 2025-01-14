@@ -4,14 +4,15 @@ import { useNavigate } from "react-router-dom";
 import { TypeAnimation } from 'react-type-animation';
 
 const WavePattern = () => (
-  <div className="absolute inset-0 w-full h-full z-0">
-    <img
-      src="/home-wave.png"
-      alt="Wave Pattern"
-      className="w-full h-full object-cover"
-    />
-  </div>
-);
+    <div className="absolute inset-0 w-[800px] lg:w-full lg:h-full z-0 flex lg:block justify-end">
+      <img
+        src="/home-wave.png"
+        alt="Wave Pattern"
+        className="lg:w-full w-[800px] lg:h-full object-contain lg:object-cover"
+      />
+    </div>
+  );
+  
 
 const Ellipse = () => (
     <div className="absolute hidden lg:block bottom-0 right-0 w-full h-full z-0">
