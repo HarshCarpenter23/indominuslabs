@@ -6,7 +6,7 @@ const Ellipse = () => (
     <img
       src="/Ellipse23.png"
       alt="Wave Pattern"
-      className="object-contain w-full h-auto"
+      className="object-contain"
     />
   </div>
 );
@@ -51,44 +51,44 @@ const ProductsShowcase = () => {
 
   return (
     <FadeIn>
-      <div id="products" className="min-h-screen bg-white relative">
-        <Ellipse />
-        <div className="max-w-7xl mx-auto p-8 relative z-10">
-          <div className="text-center mb-12 z-10">
-            <h2 className="text-sm uppercase tracking-wider mb-2">PRODUCTS</h2>
-            <h1 className="text-3xl md:text-4xl font-bold">
-              Powerful Modules, Powerful Solutions
-            </h1>
+    <div id="products" className="min-h-screen bg-white">
+      <Ellipse />
+      <div className="max-w-7xl mx-auto p-8 relative z-10">
+        <div className="text-center mb-12 z-10">
+          <h2 className="text-sm uppercase tracking-wider mb-2">PRODUCTS</h2>
+          <h1 className="text-3xl md:text-4xl font-bold">
+            Powerful Modules, Powerful Solutions
+          </h1>
+        </div>
+
+        {/* Flexbox layout for alternating rows */}
+        <div className="space-y-12">
+          {/* Row 1: Two cards on the left */}
+          <div className="flex flex-col md:flex-row md:justify-start gap-8">
+            <ProductCard
+              title={products[0].title}
+              description={products[0].description}
+            />
+            <ProductCard
+              title={products[1].title}
+              description={products[1].description}
+            />
           </div>
 
-          {/* Flexbox layout for alternating rows */}
-          <div className="space-y-12">
-            {/* Row 1: Two cards on the left */}
-            <div className="flex flex-col md:flex-row md:justify-start gap-8">
-              <ProductCard
-                title={products[0].title}
-                description={products[0].description}
-              />
-              <ProductCard
-                title={products[1].title}
-                description={products[1].description}
-              />
-            </div>
-
-            {/* Row 2: Two cards on the right */}
-            <div className="flex flex-col md:flex-row gap-8">
-              <ProductCard
-                title={products[2].title}
-                description={products[2].description}
-              />
-              <ProductCard
-                title={products[3].title}
-                description={products[3].description}
-              />
-            </div>
+          {/* Row 2: Two cards on the right */}
+          <div className="flex flex-col md:flex-row pl-0 md:pl-[250px] gap-8">
+            <ProductCard
+              title={products[2].title}
+              description={products[2].description}
+            />
+            <ProductCard
+              title={products[3].title}
+              description={products[3].description}
+            />
           </div>
         </div>
       </div>
+    </div>
     </FadeIn>
   );
 };
