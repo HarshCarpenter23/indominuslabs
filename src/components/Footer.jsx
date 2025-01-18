@@ -4,7 +4,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-purple-50 py-8 px-4 md:px-8">
+    <footer className="bg-[#151129] py-8 px-4 md:px-8">
       <div className="container mx-auto">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
@@ -194,7 +194,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright Section */}
-        <div className="mt-8 pt-8 border-t border-gray-200">
+        <div className="mt-8 pt-8 border-t border-[#5F5D5D]">
           <p className="text-center text-sm text-gray-600">
             copyright indominuslabs@{currentYear} all right reserved
           </p>

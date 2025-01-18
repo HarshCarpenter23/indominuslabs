@@ -8,13 +8,13 @@ const WebSolutionsSection = () => {
 
   return (
     <FadeIn>
-      <div className="min-h-screen flex items-center justify-center bg-white mt-2 pt-4">
+      <div className="min-h-screen flex items-center justify-center product-section-bg mt-2 pt-4">
         <div className="container mx-auto px-4 md:px-6 lg:px-8 ">
           <div className="flex flex-col-reverse lg:flex-row justify-center gap-8 lg:gap-20">
             {/* Left Content */}
             <div className="lg:w-1/2 space-y-6 max-w-xl pt-4 mx-auto">
               <div className="space-y-2">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold ">
                   How Do We Provide
                 </h2>
                 <h2 className="text-3xl md:text-3xl lg:text-4xl font-bold text-[#7203FE]">
@@ -22,7 +22,7 @@ const WebSolutionsSection = () => {
                 </h2>
               </div>
 
-              <p className="text-gray-700 leading-relaxed lg:text-base text-sm">
+              <p className=" leading-relaxed lg:text-base text-sm">
                 At our company, we provide web-based solutions tailored
                 specifically to the needs of doctors, educators, and health
                 professionals. With a keen understanding of the complexities
@@ -34,7 +34,7 @@ const WebSolutionsSection = () => {
                 needs of our customers
               </p>
 
-              <p className="text-gray-700 leading-relaxed lg:text-base text-sm">
+              <p className=" leading-relaxed lg:text-base text-sm">
                 Ultimately, our goal is to deliver tailored web-based solutions
                 that to achieve objectives in the healthcare, education, and
                 health sectors.
@@ -94,12 +94,18 @@ const WebSolutionsSection = () => {
                   src="https://lottie.host/0d60fcb2-2f00-4152-8cee-0108bdd35b4c/FSjisjZr7m.lottie"
                   loop
                   autoplay
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain z-10"
                 />
               </div>
             </div>
           </div>
+          
         </div>
+        <img
+                src="/Path3.png"
+                alt="Background Pattern"
+                className="absolute object-contain z-0 right-0"
+              />
       </div>
     </FadeIn>
   );

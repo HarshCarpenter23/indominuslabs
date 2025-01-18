@@ -29,14 +29,14 @@ const Landing = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="relative min-h-screen bg-white overflow-hidden">
-      <WavePattern />
+    <div className="relative min-h-screen landing-bg overflow-hidden">
+      {/* <WavePattern /> */}
       <Ellipse/>
 
       <div className="relative z-10 mx-2 px-4 sm:px-6 lg:px-8 pt-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 justify-between w-full">
           <div className="space-y-8 md:pt-16 md:pl-8">
-            <div className="text-2xl md:text-3xl font-bold leading-tight text-gray-900 text-left">
+            <div className="text-2xl md:text-4xl leading-tight text-left">
               <TypeAnimation
                 sequence={[
                   'Empowering the Future of Digital Security with Innovative, Compliant, and Seamless Solutions for a Connected World.',
@@ -66,7 +66,7 @@ const Landing = () => {
             </div>
           </div>
 
-          <div className="relative w-full h-[300px] md:h-[400px] lg:h-[450px] mt-8 lg:mt-0">
+          <div className="relative w-full h-[300px] md:h-[400px] lg:h-[450px] mt-8 lg:mt-0 background-image-checked">
             <DotLottieReact
               src="https://lottie.host/6932b164-3d7b-43b1-8122-f459ffef6698/a7uLHCXwru.lottie"
               loop

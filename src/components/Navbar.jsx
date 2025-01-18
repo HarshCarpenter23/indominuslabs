@@ -38,7 +38,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-sm p-2">
+    <nav className=" p-2">
       <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo and company name */}
@@ -51,7 +51,7 @@ const Navbar = () => {
                 <div className="w-18 h-8">
                   <img width={"25px"} src="/logo-IL.png" alt="Logo-IL" />
                 </div>
-                <span className="text-xl font-semibold text-transparent bg-gradient-to-r from-[#9E54FB] to-[#8331E8] bg-clip-text">
+                <span className="text-xl font-semibold gradient-text-logo">
                   INDOMINUS LABS
                 </span>
               </div>
@@ -63,18 +63,18 @@ const Navbar = () => {
             <a
               href="/"
               onClick={handleHomeClick}
-              className="text-gray-800 hover:text-gray-600 font-semibold text-lg"
+              className=" font-semibold text-lg"
             >
               Home
             </a>
             <a
               href="/#products"
               onClick={handleProductsClick}
-              className="text-gray-800 hover:text-gray-600 font-semibold text-lg"
+              className=" font-semibold text-lg"
             >
               Products
             </a>
-            <a href="/#contact" className="text-gray-800 hover:text-gray-600 font-semibold text-lg">
+            <a href="/#contact" className=" font-semibold text-lg">
               Contact Us
             </a>
             {/* <button 
@@ -121,7 +121,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 rounded-md text-gray-800 hover:text-gray-600"
+              className="p-2 rounded-md "
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -136,20 +136,20 @@ const Navbar = () => {
             <a
               href="/"
               onClick={handleHomeClick}
-              className="block px-3 py-2 text-gray-800 hover:text-gray-600"
+              className="block px-3 py-2 "
             >
               Home
             </a>
             <a
               href="/#products"
               onClick={handleProductsClick}
-              className="block px-3 py-2 text-gray-800 hover:text-gray-600"
+              className="block px-3 py-2 "
             >
               Products
             </a>
             <a
               href="/#contact"
-              className="block px-3 py-2 text-gray-800 hover:text-gray-600"
+              className="block px-3 py-2 "
             >
               Contact Us
             </a>

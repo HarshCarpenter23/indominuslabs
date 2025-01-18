@@ -14,7 +14,7 @@ const MentorsSection = () => {
   return (
     <FadeIn>
 
-    <div className="container mx-auto px-4 py-12 bg-[#F9F4FF]">
+    <div className="container mx-auto px-4 py-12 ">
       <h2 className="text-4xl font-bold text-center mb-12">
         <span className="text-purple-600 border-b-4 border-purple-600 pb-2">
           Mentors
@@ -25,7 +25,7 @@ const MentorsSection = () => {
         {mentors.map((mentor) => (
             <div 
             key={mentor.name}
-            className="flex flex-col items-center"
+            className="flex flex-col items-center "
             >
             <div className="w-64 h-64 mb-4 overflow-hidden rounded-lg shadow-lg">
               <img

@@ -101,13 +101,16 @@ const ReviewCardSlider = () => {
   return (
     <FadeIn>
 
-    <section className="w-full bg-white py-6 md:py-12 px-4 md:px-8 mb-6">
+    <section className="w-full product-section-bg  py-6 md:py-12 px-4 md:px-8 mb-6">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="mb-6 md:mb-12 text-left">
-          <h4 className="text-sm md:text-base font-medium text-gray-600 mb-2">Reviews</h4>
-          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-3">Our Customers' Reviews</h2>
-          <p className="text-sm md:text-base text-gray-600">
+        <h4 className="text-xl md:text-base font-semibold text-gradient-blue mb-2 tracking-[0.25em]">
+  REVIEWS
+</h4>
+
+          <h2 className="text-2xl md:text-4xl font-bold mb-3">Our Customers' Reviews</h2>
+          <p className="text-sm md:text-base ">
             Our customers speaking about the value they uncovered with Indominus Labs...
           </p>
         </div>
@@ -155,10 +158,10 @@ const ReviewCardSlider = () => {
                   >
                   <div className="relative h-full">
                     {/* Purple Background */}
-                    <div className="absolute inset-0 bg-purple-600 rounded-xl md:rounded-3xl transform -rotate-6" />
+                    {/* <div className="absolute inset-0 bg-purple-600 rounded-xl md:rounded-3xl transform -rotate-6" /> */}
                     
                     {/* Card Content */}
-                    <div className="relative bg-white rounded-xl md:rounded-3xl p-4 md:p-6 lg:p-8 shadow-lg h-full">
+                    <div className="relative product-shadow rounded-xl md:rounded-3xl p-4 md:p-6 lg:p-8 shadow-lg h-full">
                       <div className="text-center">
                         <h3 className="font-semibold text-base md:text-xl mb-1">{review.name}</h3>
                         <p className="text-gray-600 text-xs md:text-base mb-2">{review.title}</p>

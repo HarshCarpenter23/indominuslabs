@@ -2,9 +2,9 @@ import React from "react";
 import { FadeIn } from "./FadeIn";
 
 const Ellipse = () => (
-  <div className="absolute w-full h-full z-0">
+  <div className="absolute w-full h-full z-0 right-4 left-[-400px]">
     <img
-      src="/Ellipse23.png"
+      src="/Path2.png"
       alt="Wave Pattern"
       className="object-contain"
     />
@@ -12,18 +12,19 @@ const Ellipse = () => (
 );
 
 const ProductCard = ({ title, description }) => (
-  <div className="relative bg-white rounded-3xl shadow-xl p-8 h-64 w-full md:w-96 overflow-hidden transform transition-all duration-500 hover:scale-105 product-shadow">
-    <div className="relative z-10 h-full flex flex-col justify-between">
-      <div>
-        <h3 className="text-purple-600 text-xl font-bold mb-4">{title}</h3>
-        <p className="text-gray-700 text-base">{description}</p>
+    <div className="relative bg-white rounded-3xl shadow-xl p-8 h-80 w-80 overflow-hidden transform transition-all duration-500 hover:scale-105 product-shadow">
+      <div className="relative z-10 h-full flex flex-col justify-between">
+        <div>
+          <h3 className="text-purple-600 text-xl font-bold mb-4">{title}</h3>
+          <p className="text-lg text-[#94A3B8]">{description}</p>
+        </div>
+        <button className="w-32 mx-auto text-purple-600 border border-purple-600 rounded-full py-2 px-4 hover:bg-purple-600 hover:text-white transition-colors duration-300">
+          Learn More
+        </button>
       </div>
-      <button className="w-32 mx-auto text-purple-600 border border-purple-600 rounded-full py-2 px-4 hover:bg-purple-600 hover:text-white transition-colors duration-300">
-        Learn More
-      </button>
     </div>
-  </div>
-);
+  );
+  
 
 const ProductsShowcase = () => {
   const products = [
@@ -51,7 +52,7 @@ const ProductsShowcase = () => {
 
   return (
     <FadeIn>
-    <div id="products" className="min-h-screen bg-white">
+    <div id="products" className="min-h-screen product-section-bg">
       <Ellipse />
       <div className="max-w-7xl mx-auto p-8 relative z-10">
         <div className="text-center mb-12 z-10">
