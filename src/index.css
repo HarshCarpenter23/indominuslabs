@@ -19,25 +19,23 @@
 }
 
 body {
-    background: -webkit-radial-gradient(
+  background: -webkit-radial-gradient(
       48.55% 0%,
       109.49% 104.63%,
       rgba(192, 132, 252, 0.72) 0%,
       rgba(168, 85, 247, 0.4) 22.35%,
       rgba(15, 23, 42, 0.0001) 100%
-    ), rgba(12, 16, 26, 1);
-    background: -moz-radial-gradient(
+    ),
+    rgba(12, 16, 26, 1);
+  background: -moz-radial-gradient(
       48.55% 0%,
       109.49% 104.63%,
       rgba(192, 132, 252, 0.72) 0%,
       rgba(168, 85, 247, 0.4) 22.35%,
       rgba(15, 23, 42, 0.0001) 100%
-    ), rgba(12, 16, 26, 1);
-    /* background-blend-mode: overlay; */
-  
-
-  
-  
+    ),
+    rgba(12, 16, 26, 1);
+  background-size: cover;
   color: #fff;
 }
 
@@ -274,26 +272,29 @@ path.two {
 }
 
 
+
 .landing-bg {
   background: -webkit-radial-gradient(
       48.55% 0%,
       109.49% 104.63%,
-      rgba(192, 132, 252, 0.72) 0%,
-      rgba(120, 59, 177, 0.4) 22.35%,
-      rgba(15, 23, 42, 0.8) 75%,   /* Darker towards the bottom */
-      rgba(0, 0, 0, 1) 100%        /* Fully dark at the bottom */
+      rgba(192, 132, 252, 0.72) 0%,  /* Match the body top gradient */
+      rgba(168, 85, 247, 0.4) 22.35%, 
+      rgba(15, 23, 42, 0.5) 75%,    /* Smooth transition to dark */
+      rgba(0, 0, 0, 1) 100%         /* Fully dark at the bottom */
     ),
     rgba(12, 16, 26, 1) !important;
 
   background: -moz-radial-gradient(
       48.55% 0%,
       109.49% 104.63%,
-      rgba(192, 132, 252, 0.72) 0%,
-      rgba(120, 59, 177, 0.4) 22.35%,
-      rgba(15, 23, 42, 0.8) 75%,   /* Darker towards the bottom */
-      rgba(0, 0, 0, 1) 100%        /* Fully dark at the bottom */
+      rgba(192, 132, 252, 0.72) 0%,  /* Match the body top gradient */
+      rgba(168, 85, 247, 0.4) 22.35%, 
+      rgba(15, 23, 42, 0.5) 75%,    /* Smooth transition to dark */
+      rgba(0, 0, 0, 1) 100%         /* Fully dark at the bottom */
     ),
     rgba(12, 16, 26, 1) !important;
+
+  background-size: cover;
 }
 
 

@@ -51,7 +51,7 @@ const Navbar = () => {
                 <div className="w-18 h-8">
                   <img width={"25px"} src="/logo-IL.png" alt="Logo-IL" />
                 </div>
-                <span className="text-xl font-semibold gradient-text-logo">
+                <span className="text-xl font-semibold mx-auto">
                   INDOMINUS LABS
                 </span>
               </div>

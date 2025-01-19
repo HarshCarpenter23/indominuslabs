@@ -24,10 +24,10 @@ const ScheduleDemo = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl shadow-xl flex flex-col md:flex-row max-w-5xl w-full overflow-hidden">
+    <div className="min-h-screen flex items-center justify-center p-4 landing-bg">
+      <div className=" rounded-2xl landing-bg shadow-xl flex flex-col md:flex-row max-w-5xl w-full overflow-hidden">
         {/* Left side - Animation and Text */}
-        <div className="md:w-1/2 relative h-[450px] md:h-auto">
+        <div className="md:w-1/2 relative h-[450px] md:h-auto ">
           {/* Animation Container */}
           <div className="h-full w-full">
             <DotLottieReact
@@ -39,19 +39,19 @@ const ScheduleDemo = () => {
           </div>
           
           {/* Text Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#fff]/90 flex flex-col justify-end p-6 md:p-8 ">
-            <h2 className="text-2xl md:text-3xl font-bold mb-2 md:mb-4 text-[#7203FE]">
+          <div className="absolute inset-0  flex flex-col justify-end p-6 md:p-8 ">
+            <h2 className="text-2xl md:text-3xl font-bold mb-2 md:mb-4 ">
               Get in Touch
             </h2>
-            <p className="text-base md:text-lg mb-4 md:mb-6 text-[#7203FE] max-w-md">
+            <p className="text-base md:text-lg mb-4 md:mb-6  max-w-md">
               We'd love to hear from you. Send us a message and we'll respond as soon as possible.
             </p>
           </div>
         </div>
 
         {/* Right side - Form */}
-        <div className="md:w-1/2 p-6 md:p-12 bg-white">
-          <h3 className="text-xl md:text-2xl font-semibold mb-6 md:mb-8 text-gray-800">
+        <div className="md:w-1/2 p-6 md:p-12 ">
+          <h3 className="text-xl md:text-2xl font-semibold mb-6 md:mb-8 ">
             Send us a message
           </h3>
           
