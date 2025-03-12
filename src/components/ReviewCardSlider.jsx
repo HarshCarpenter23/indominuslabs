@@ -27,41 +27,23 @@ const ReviewCardSlider = () => {
 
   const reviews = [
     {
-      name: "Raju Sharma",
-      title: "Lead designer",
+      name: "Yuvaraj",
+      title: "Owner - Velvizhi Construction",
       rating: 5,
-      content: "Love your health app, it keeps me on track with my meds and health tips. So, handy."
+      content: "Love the em metrices, it keeps me on track with my civil sites progress. So handy."
     },
     {
       name: "Mohit Bhatia",
       title: "Program Manager - Uber",
       rating: 5,
-      content: "Impressed by the seamless integration and powerful authentication features."
+      content: "Impressed by the seamless integration and powerful authentication features. 100% password less."
     },
     {
-      name: "Radhika Singh",
-      title: "Lead designer",
+      name: "SKMC",
+      title: "Audit, Advisory & Outsourcing Company",
       rating: 5,
-      content: "Teaching made easy, your education app engages students and simplifies my job."
+      content: "Film Budegeting made easy, your app simplifies my job."
     },
-    {
-      name: "Alex Kumar",
-      title: "Tech Lead",
-      rating: 5,
-      content: "Your doctor web app rocks! it helps me manage appointments and patient info hassle-free."
-    },
-    {
-      name: "Sarah Miller",
-      title: "Product Manager",
-      rating: 5,
-      content: "The platform has transformed how we handle project management."
-    },
-    {
-      name: "David Chen",
-      title: "Senior Developer",
-      rating: 5,
-      content: "Outstanding development tools that streamlined our workflow."
-    }
   ];
 
   const maxSlides = reviews.length - slidesPerView;
@@ -164,7 +146,7 @@ const ReviewCardSlider = () => {
                     <div className="relative product-shadow rounded-xl md:rounded-3xl p-4 md:p-6 lg:p-8 shadow-lg h-full">
                       <div className="text-center">
                         <h3 className="font-semibold text-base md:text-xl mb-1">{review.name}</h3>
-                        <p className="text-gray-600 text-xs md:text-base mb-2">{review.title}</p>
+                        <p className="text-gray-400 text-xs md:text-base mb-2">{review.title}</p>
                         <div className="flex justify-center mb-3 md:mb-4">
                           {[...Array(review.rating)].map((_, i) => (
                               <span key={i} className="text-yellow-400 text-sm md:text-lg">★</span>

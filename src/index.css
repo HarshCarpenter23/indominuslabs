@@ -28,6 +28,7 @@ body {
     rgba(12, 16, 26, 1);
   background-size: cover;
   color: #fff;
+  overflow-x: hidden;
 }
 
 .purple-shadow {
@@ -295,4 +296,67 @@ path.two {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-weight: bold;
+}
+
+.glitch-container {
+  overflow: hidden;
+}
+
+.glitch-text {
+  font-size: 5rem;
+  font-weight: bold;
+  position: relative;
+  color: #f1f1f1;
+  animation: glitch 2s infinite;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: 'Em-Auth';
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #0C101A;
+  background: transparent;
+  clip-path: polygon(0 0, 100% 0, 100% 30%, 0 30%);
+  animation: glitch 2s infinite;
+}
+
+.glitch-text::after {
+  color: #1D2043;
+  clip-path: polygon(0 70%, 100% 70%, 100% 100%, 0 100%);
+}
+
+@keyframes glitch {
+  0%, 100% {
+      transform: translate(0);
+  }
+  20% {
+      transform: translate(-2px, 2px);
+  }
+  40% {
+      transform: translate(2px, -2px);
+  }
+  60% {
+      transform: translate(-1px, 1px);
+  }
+  80% {
+      transform: translate(1px, -1px);
+  }
+}
+
+.neon-text {
+  font-size: 2.25rem;
+  color: #fff;
+  text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+      text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
+  }
+  100% {
+      text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff, 0 0 80px #00d4ff, 0 0 160px #00d4ff;
+  }
 }

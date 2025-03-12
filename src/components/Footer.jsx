@@ -19,7 +19,7 @@ const Footer = () => {
             </a>
             
 
-            <p className="text-sm text-gray-600 mb-4">
+            <p className="text-sm text-gray-300 mb-4">
               Where Innovation Meets Expertise in security and analytics
             </p>
             {/* Social Links */}
@@ -27,7 +27,7 @@ const Footer = () => {
               <a
                 href="https://www.linkedin.com/company/indominus-labs/"
                 target="__blank"
-                className="text-gray-600 hover:text-purple-600"
+                className="text-gray-300 hover:text-purple-600"
               >
                 <svg
                   className="h-5 w-5"
@@ -37,7 +37,7 @@ const Footer = () => {
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                 </svg>
               </a>
-              <a href="https://github.com/indominus-labs" target="__blank" className="text-gray-600 hover:text-purple-600">
+              <a href="https://github.com/indominus-labs" target="__blank" className="text-gray-300 hover:text-purple-600">
                 <svg
                   className="h-5 w-5"
                   fill="currentColor"
@@ -55,22 +55,22 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Products</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-600 hover:text-purple-600">
+                <a href="#" className="text-gray-300 hover:text-purple-600">
                   FLICK Analytics
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-purple-600">
+                <a href="#" className="text-gray-300 hover:text-purple-600">
                   Site Analytics
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-purple-600">
+                <a href="#" className="text-gray-300 hover:text-purple-600">
                   Advanced Authentication System
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-purple-600">
+                <a href="#" className="text-gray-300 hover:text-purple-600">
                   ERP Solutions
                 </a>
               </li>
@@ -82,22 +82,22 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Solutions</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-600 hover:text-purple-600">
+                <a href="#" className="text-gray-300 hover:text-purple-600">
                   Behavioural Biometrics
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-purple-600">
+                <a href="#" className="text-gray-300 hover:text-purple-600">
                   Face & Eye Tracking
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-purple-600">
+                <a href="#" className="text-gray-300 hover:text-purple-600">
                   Education Analytics
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-purple-600">
+                <a href="#" className="text-gray-300 hover:text-purple-600">
                   Doctor Analytics
                 </a>
               </li>
@@ -109,22 +109,22 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Company</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-600 hover:text-purple-600">
+                <a href="#" className="text-gray-300 hover:text-purple-600">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-purple-600">
+                <a href="#" className="text-gray-300 hover:text-purple-600">
                   Our Team
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-purple-600">
+                <a href="#" className="text-gray-300 hover:text-purple-600">
                   Pricing
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-purple-600">
+                <a href="#" className="text-gray-300 hover:text-purple-600">
                   Our Blog
                 </a>
               </li>
@@ -135,7 +135,7 @@ const Footer = () => {
           <div id='contact' className="md:col-span-1">
             <h3 className="font-semibold text-lg mb-4">Contact Us</h3>
             <ul className="space-y-2">
-              <li className="flex items-center gap-2 text-gray-600">
+              <li className="flex items-center gap-2 text-gray-300">
                 <svg
                   className="h-5 w-5"
                   fill="none"
@@ -151,7 +151,7 @@ const Footer = () => {
                 </svg>
                 +91 9884442082
               </li>
-              <li className="flex items-center gap-2 text-gray-600">
+              <li className="flex items-center gap-2 text-gray-300">
                 <svg
                   className="h-5 w-5"
                   fill="none"
@@ -167,7 +167,7 @@ const Footer = () => {
                 </svg>
                 contact@indominuslabs.in
               </li>
-              <li className="flex items-center gap-2 text-gray-600">
+              <li className="flex items-center gap-2 text-gray-300">
                 <svg
                   className="h-5 w-5"
                   fill="none"
@@ -195,7 +195,7 @@ const Footer = () => {
 
         {/* Copyright Section */}
         <div className="mt-8 pt-8 border-t border-[#5F5D5D]">
-          <p className="text-center text-sm text-gray-600">
+          <p className="text-center text-sm text-gray-300">
             copyright indominuslabs@{currentYear} all right reserved
           </p>
         </div>

@@ -21,7 +21,7 @@ const MentorsSection = () => {
         </span>
       </h2>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-8">
         {mentors.map((mentor) => (
             <div 
             key={mentor.name}
@@ -35,7 +35,7 @@ const MentorsSection = () => {
                 />
             </div>
             <h3 className="text-xl font-bold mb-2">{mentor.name}</h3>
-            <p className="text-gray-600 font-medium">{mentor.affiliation}</p>
+            <p className="text-white font-medium border-b-2 border-[#DCBD00]">{mentor.affiliation}</p>
           </div>
         ))}
       </div>

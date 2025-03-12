@@ -9,6 +9,9 @@ import PartnersSection from './components/PartnersSection';
 import ProductsShowcase from './components/ProductCards';
 import ReviewCardSlider from './components/ReviewCardSlider';
 import WebSolutions from './components/WebSolutions';
+import EMauth from './components/EMauth';
+import BehaviouralBiometrics from './components/BehaviouralBiometrics';
+import HowItWorks from './components/HowItWorks';
 
 // Create a MainLayout component to hold all components except ScheduleDemo
 const MainLayout = () => {
@@ -17,8 +20,11 @@ const MainLayout = () => {
       <Navbar />
       <Landing />
       <ProductsShowcase />
-      <WebSolutions />
-      <PartnersSection />
+      <EMauth />
+      <HowItWorks />
+      <BehaviouralBiometrics />
+      {/* <WebSolutions /> */}
+      {/* <PartnersSection /> */}
       <MentorsSection />
       <ReviewCardSlider />
       <Footer />

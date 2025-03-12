@@ -3,8 +3,8 @@ import React from 'react';
 const ShinyButton = () => {
   return (
     <a 
-    className='px-8 py-3 rounded-full font-semibold hover:border hover:bg-[#fff] hover:text-[#7203FE]'
-      href="/schedule-demo"
+    className='px-8 py-3 rounded-full font-semibold hover:border hover:bg-[#fff] hover:text-[#7203FE] mt-4'
+      href="https://behaviour.indominuslabs.in"
       style={{
         display: 'inline-flex',
         justifyContent: 'center',
