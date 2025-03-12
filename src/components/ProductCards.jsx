@@ -77,7 +77,7 @@ const ProductCard = ({ title, description, href, delay }) => {
 const ProductsShowcase = () => {
   const products = [
     {
-      title: "Em-Auth",
+      title: "Em Auth",
       description:
         "Bringing cinematic magic to your fingertips with our immersive movie streaming platform.",
       href: "/#emauth"
@@ -89,7 +89,7 @@ const ProductsShowcase = () => {
       href: "/#behaviour"
     },
     {
-      title: "Em-metrices",
+      title: "Em metrices",
       description: "Building the future with innovative & advanced digital tools for the civil engineering industry.",
       href: "https://m-analytics-rust.vercel.app"
     },
