@@ -5,7 +5,7 @@ import FaceInfoImg from "../assets/about-2.png"; // Update with the correct path
 
 const HowItWorks = () => {
   return (
-    <div className="bg-gradient-to-br from-[#0C101A] to-[#8960B8] py-16">
+    <div id="howitworks" className="bg-gradient-to-br from-[#0C101A] to-[#8960B8] py-16">
       <div className="w-full px-6 lg:px-16">
         <FadeIn className="flex flex-col md:flex-row gap-10 items-center justify-between">
           {/* Left Content */}

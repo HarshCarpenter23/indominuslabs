@@ -55,25 +55,25 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Products</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-300 hover:text-purple-600">
+                <a href="https://flickanalytics.in/" className="text-gray-300 hover:text-purple-600">
                   FLICK Analytics
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-purple-600">
+                <a href="https://m-analytics-rust.vercel.app/" className="text-gray-300 hover:text-purple-600">
                   Site Analytics
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-purple-600">
+                <a href="/#emauth" className="text-gray-300 hover:text-purple-600">
                   Advanced Authentication System
                 </a>
               </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-purple-600">
-                  ERP Solutions
+              {/* <li>
+                <a href="/#behaviour" className="text-gray-300 hover:text-purple-600">
+                  Behaviour Biometrics
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -82,16 +82,16 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Solutions</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-300 hover:text-purple-600">
+                <a href="/#behaviour" className="text-gray-300 hover:text-purple-600">
                   Behavioural Biometrics
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-purple-600">
+                <a href="/#howitworks" className="text-gray-300 hover:text-purple-600">
                   Face & Eye Tracking
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#" className="text-gray-300 hover:text-purple-600">
                   Education Analytics
                 </a>
@@ -100,7 +100,7 @@ const Footer = () => {
                 <a href="#" className="text-gray-300 hover:text-purple-600">
                   Doctor Analytics
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
 
