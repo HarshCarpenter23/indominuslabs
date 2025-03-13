@@ -61,12 +61,12 @@ const Footer = () => {
               </li>
               <li>
                 <a href="https://m-analytics-rust.vercel.app/" className="text-gray-300 hover:text-purple-600">
-                  Site Analytics
+                  Em metrices
                 </a>
               </li>
               <li>
                 <a href="/#emauth" className="text-gray-300 hover:text-purple-600">
-                  Advanced Authentication System
+                  Em Auth
                 </a>
               </li>
               {/* <li>
