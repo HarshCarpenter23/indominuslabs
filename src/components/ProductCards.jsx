@@ -106,9 +106,16 @@ const ProductsShowcase = () => {
         className="min-h-screen mx-auto product-section-bg py-16"
         ref={sectionRef}
       >
-            <div className="stars z-1"></div>
+            <div className="stars"></div>
             <div className="shooting-star z-1"></div>
+            <div className="stars"></div>
+            <div className="stars"></div>
+            <div className="stars"></div>
+            <div className="stars"></div>
+            
             <div className="shooting-star z-1"></div>
+            <div className="stars"></div>
+            <div className="stars"></div>
     
         <Ellipse />
         <div className="max-w-7xl mx-auto p-8 relative z-10">
