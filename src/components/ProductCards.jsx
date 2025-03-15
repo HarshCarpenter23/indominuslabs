@@ -107,13 +107,13 @@ const ProductsShowcase = () => {
         ref={sectionRef}
       >
             <div className="stars"></div>
-            <div className="shooting-star z-1"></div>
+            {/* <div className="shooting-star z-1"></div> */}
             <div className="stars"></div>
             <div className="stars"></div>
             <div className="stars"></div>
             <div className="stars"></div>
             
-            <div className="shooting-star z-1"></div>
+            {/* <div className="shooting-star z-1"></div> */}
             <div className="stars"></div>
             <div className="stars"></div>
     
@@ -132,8 +132,8 @@ const ProductsShowcase = () => {
               Powerful Modules, Powerful Solutions
             </h1>
           </motion.div>
-          <div className="shooting-star z-1"></div>
-          <div className="shooting-star z-1"></div>
+          {/* <div className="shooting-star z-1"></div> */}
+          {/* <div className="shooting-star z-1"></div> */}
           {/* <div className="shooting-star z-1"></div> */}
 
           {/* Responsive card layout with staggered animation */}

@@ -41,7 +41,7 @@ function App() {
         
         {/* Schedule demo route */}
         <Route 
-          path="/schedule-demo" 
+          path="/scheduledemo" 
           element={
             <>
               <Navbar />

@@ -87,7 +87,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/#howitworks" className="text-gray-300 hover:text-purple-600">
+                <a href="https://facetracker.indominuslabs.in/" className="text-gray-300 hover:text-purple-600">
                   Face & Eye Tracking
                 </a>
               </li>

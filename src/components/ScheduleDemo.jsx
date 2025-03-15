@@ -58,7 +58,7 @@ const ScheduleDemo = () => {
           <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
             <div className="space-y-4">
               <div className="relative">
-                <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+                <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-900 h-5 w-5" />
                 <input
                   type="text"
                   id="name"
@@ -66,13 +66,13 @@ const ScheduleDemo = () => {
                   placeholder="Your name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#7203FE] focus:border-transparent bg-gray-50"
+                  className="w-full pl-12 pr-4 py-3 text-gray-900 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#7203FE] focus:border-transparent bg-gray-50"
                   required
                 />
               </div>
 
               <div className="relative">
-                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-900 h-5 w-5" />
                 <input
                   type="email"
                   id="email"
@@ -80,13 +80,13 @@ const ScheduleDemo = () => {
                   placeholder="Your email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#7203FE] focus:border-transparent bg-gray-50"
+                  className="w-full pl-12 pr-4 py-3 text-gray-900 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#7203FE] focus:border-transparent bg-gray-50"
                   required
                 />
               </div>
 
               <div className="relative">
-                <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+                <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-900 h-5 w-5" />
                 <input
                   type="tel"
                   id="phone"
@@ -94,13 +94,13 @@ const ScheduleDemo = () => {
                   placeholder="Your phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#7203FE] focus:border-transparent bg-gray-50"
+                  className="w-full pl-12 pr-4 py-3 text-gray-900 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#7203FE] focus:border-transparent bg-gray-50"
                   required
                 />
               </div>
 
               <div className="relative">
-                <MessageSquare className="absolute left-3 top-4 text-gray-400 h-5 w-5" />
+                <MessageSquare className="absolute left-3 top-4 text-gray-900 h-5 w-5" />
                 <textarea
                   id="message"
                   name="message"
@@ -108,7 +108,7 @@ const ScheduleDemo = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
-                  className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#7203FE] focus:border-transparent bg-gray-50 resize-none"
+                  className="w-full pl-12 pr-4 py-3 text-gray-900 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#7203FE] focus:border-transparent bg-gray-50 resize-none"
                   required
                 />
               </div>

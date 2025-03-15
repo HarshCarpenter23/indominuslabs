@@ -60,13 +60,13 @@ const Navbar = () => {
 
           {/* Desktop navigation */}
           <div className="hidden md:flex items-center space-x-9">
-            <a
+            {/* <a
               href="/"
               onClick={handleHomeClick}
               className=" font-semibold text-lg"
             >
               Home
-            </a>
+            </a> */}
             <a
               href="/#products"
               onClick={handleProductsClick}
@@ -84,7 +84,7 @@ const Navbar = () => {
               Schedule Demo
             </button> */}
             <div className="wrapper">
-  <a className="cta" href="/schedule-demo">
+  <a className="cta" href="/scheduledemo">
     <span className="cta-text font-semibold">SCHEDULE DEMO</span>
     <span className="cta-arrow">
       <svg
@@ -133,13 +133,13 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a
+            {/* <a
               href="/"
               onClick={handleHomeClick}
               className="block px-3 py-2 "
             >
               Home
-            </a>
+            </a> */}
             <a
               href="/#products"
               onClick={handleProductsClick}
@@ -160,7 +160,7 @@ const Navbar = () => {
               Schedule Demo
             </button> */}
             <div className="wrapper">
-  <a className="cta" href="/schedule-demo">
+  <a className="cta" href="/scheduledemo">
     <span className="cta-text">SCHEDULE DEMO</span>
     <span className="cta-arrow">
       <svg
