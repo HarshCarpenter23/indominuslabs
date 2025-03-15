@@ -148,7 +148,7 @@ const Navbar = () => {
               <ul className="space-y-4">
                 <li>
                   <a
-                    href="#"
+                    href="/#emauth"
                     className="text-gray-300 hover:text-white hover-underline text-md font-medium"
                   >
                     Em Auth
@@ -173,7 +173,7 @@ const Navbar = () => {
               <ul className="space-y-4">
                 <li>
                   <a
-                    href="/#emauth"
+                    href="https://m-analytics-rust.vercel.app"
                     className="text-gray-300 hover:text-white hover-underline text-md font-medium"
                   >
                     Em metrices
@@ -496,10 +496,10 @@ const Navbar = () => {
               <ul className="space-y-4">
                 <li>
                   <a
-                    href="#"
+                    href="/about"
                     className="text-gray-300 hover:text-white text-md font-medium hover-underline"
                   >
-                    Advanced Threat Detection
+                    About Us
                   </a>
                 </li>
                 <li>
