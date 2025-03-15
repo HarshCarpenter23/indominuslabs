@@ -11,6 +11,7 @@ import ReviewCardSlider from './components/ReviewCardSlider';
 import WebSolutions from './components/WebSolutions';
 import EMauth from './components/EMauth';
 import BehaviouralBiometrics from './components/BehaviouralBiometrics';
+import About from './components/AboutUs';
 // import HowItWorks from './components/HowItWorks';
 
 // Create a MainLayout component to hold all components except ScheduleDemo
@@ -46,6 +47,16 @@ function App() {
             <>
               <Navbar />
               <ScheduleDemo />
+              <Footer />
+            </>
+          } 
+        />
+        <Route 
+          path="/about" 
+          element={
+            <>
+              <Navbar />
+              <About />
               <Footer />
             </>
           } 

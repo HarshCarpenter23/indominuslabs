@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="bg-[#151129] py-8 px-4 md:px-8">
       <div className="container mx-auto">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Description Section */}
           <div className="md:col-span-1">
             <a href="#">
@@ -54,21 +54,24 @@ const Footer = () => {
           <div className="md:col-span-1">
             <h3 className="font-semibold text-lg mb-4">Products</h3>
             <ul className="space-y-2">
-              <li>
-                <a href="https://flickanalytics.in/" className="text-gray-300 hover:text-purple-600">
-                  FLICK Analytics
-                </a>
-              </li>
-              <li>
-                <a href="https://m-analytics-rust.vercel.app/" className="text-gray-300 hover:text-purple-600">
-                  Em metrices
-                </a>
-              </li>
-              <li>
-                <a href="/#emauth" className="text-gray-300 hover:text-purple-600">
+            <li>
+                <a href="/#emauth" className="text-gray-300 hover:text-purple-600 hover-underline">
                   Em Auth
                 </a>
               </li>
+              
+              <li>
+                <a href="https://m-analytics-rust.vercel.app/" className="text-gray-300 hover:text-purple-600 hover-underline">
+                  Em metrices
+                </a>
+              </li>
+
+              <li>
+                <a href="https://flickanalytics.in/" className="text-gray-300 hover:text-purple-600 hover-underline">
+                  Flick Analytics
+                </a>
+              </li>
+              
               {/* <li>
                 <a href="/#behaviour" className="text-gray-300 hover:text-purple-600">
                   Behaviour Biometrics
@@ -82,12 +85,12 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Solutions</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/#behaviour" className="text-gray-300 hover:text-purple-600">
+                <a href="/#behaviour" className="text-gray-300 hover:text-purple-600 hover-underline">
                   Behavioural Biometrics
                 </a>
               </li>
               <li>
-                <a href="https://facetracker.indominuslabs.in/" className="text-gray-300 hover:text-purple-600">
+                <a href="https://facetracker.indominuslabs.in/" className="text-gray-300 hover:text-purple-600 hover-underline">
                   Face & Eye Tracking
                 </a>
               </li>
