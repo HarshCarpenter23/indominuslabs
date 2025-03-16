@@ -633,7 +633,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 rounded-md "
+              className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 "
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -643,149 +643,275 @@ const Navbar = () => {
 
       {/* Mobile menu HAAALLLOOOOOOOOO */}
       {/* Mobile menu - Enhanced UI */}
-{isMenuOpen && (
-  <div className="md:hidden fixed inset-0 bg-gray-900 bg-opacity-90 z-50 overflow-y-auto h-full">
-    <div className="flex justify-end p-4">
-      <button 
-        onClick={() => setIsMenuOpen(false)}
-        className="p-2 rounded-full bg-gray-800 hover:bg-gray-700"
-      >
-        <X size={24} />
-      </button>
-    </div>
-    
-    <div className="px-4 py-2 space-y-4">
-      {/* Logo and company name centered on mobile */}
-      <div className="flex items-center justify-center pb-6 border-b border-gray-700">
-        <div onClick={() => navigate("/")} className="flex items-center cursor-pointer">
-          <img width={"25px"} src="/logo-IL.png" alt="Logo-IL" className="mr-2" />
-          <span className="text-xl font-semibold">INDOMINUS LABS</span>
-        </div>
-      </div>
-      
-      {/* Products dropdown for mobile */}
-      <div className="rounded-lg overflow-hidden">
-        <button 
-          onClick={() => toggleMobileDropdown('products')}
-          className="flex w-full justify-between items-center p-4 bg-gray-800 bg-opacity-60 rounded-t-lg"
-        >
-          <div className="flex items-center">
-            <Tag className="mr-3 h-5 w-5 text-purple-400" />
-            <span className="text-lg font-semibold">Products</span>
+      {isMenuOpen && (
+        <div className="md:hidden fixed inset-0 bg-gray-900 bg-opacity-90 z-50 overflow-y-auto h-full">
+          <div className="flex justify-end p-4">
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              className="p-2 rounded-full bg-gray-800 hover:bg-gray-700"
+            >
+              <X size={24} />
+            </button>
           </div>
-          <ChevronDown 
-            className={`h-5 w-5 text-purple-400 transform transition-transform duration-300 ${mobileDropdowns.products ? 'rotate-180' : ''}`} 
-          />
-        </button>
-        
-        {mobileDropdowns.products && (
-          <div className="bg-gray-800 bg-opacity-30 p-4 rounded-b-lg space-y-4">
-            <div>
-              <h3 className="text-purple-400 font-semibold mb-2 text-sm tracking-wider">SECURITY</h3>
-              <a href="/#emauth" className="block py-2 px-3 hover:bg-gray-700 rounded-md">Em Auth</a>
+
+          <div className="px-4 py-2 space-y-4">
+            {/* Logo and company name centered on mobile */}
+            <div className="flex items-center justify-center pb-6 border-b border-gray-700">
+              <div
+                onClick={() => navigate("/")}
+                className="flex items-center cursor-pointer"
+              >
+                <img
+                  width={"25px"}
+                  src="/logo-IL.png"
+                  alt="Logo-IL"
+                  className="mr-2"
+                />
+                <span className="text-xl font-semibold">INDOMINUS LABS</span>
+              </div>
             </div>
-            
-            <div>
-              <h3 className="text-purple-400 font-semibold mb-2 text-sm tracking-wider">ANALYTICS</h3>
-              <a href="https://m-analytics-rust.vercel.app" className="block py-2 px-3 hover:bg-gray-700 rounded-md">Em metrices</a>
-              <a href="https://flickanalytics.in" className="block py-2 px-3 hover:bg-gray-700 rounded-md">Flick Analytics</a>
+
+            {/* Products dropdown for mobile */}
+            <div className="rounded-lg overflow-hidden">
+              <button
+                onClick={() => toggleMobileDropdown("products")}
+                className="flex w-full justify-between items-center p-4 bg-gray-800 bg-opacity-60 rounded-t-lg"
+              >
+                <div className="flex items-center">
+                  <Tag className="mr-3 h-5 w-5 text-purple-400" />
+                  <span className="text-lg font-semibold">Products</span>
+                </div>
+                <ChevronDown
+                  className={`h-5 w-5 text-purple-400 transform transition-transform duration-300 ${
+                    mobileDropdowns.products ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+
+              {mobileDropdowns.products && (
+                <div className="bg-gray-800 bg-opacity-40 p-4 rounded-b-lg space-y-4">
+                  <div>
+                    <h3 className="text-purple-400 font-semibold mb-2 text-sm tracking-wider">
+                      SECURITY
+                    </h3>
+                    <a
+                      href="/#emauth"
+                      className="block py-2 px-3 hover:bg-gray-700 rounded-md"
+                    >
+                      Em Auth
+                    </a>
+                  </div>
+
+                  <div>
+                    <h3 className="text-purple-400 font-semibold mb-2 text-sm tracking-wider">
+                      ANALYTICS
+                    </h3>
+                    <a
+                      href="https://m-analytics-rust.vercel.app"
+                      className="block py-2 px-3 hover:bg-gray-700 rounded-md"
+                    >
+                      Em metrices
+                    </a>
+                    <a
+                      href="https://flickanalytics.in"
+                      className="block py-2 px-3 hover:bg-gray-700 rounded-md"
+                    >
+                      Flick Analytics
+                    </a>
+                  </div>
+
+                  <div>
+                    <h3 className="text-purple-400 font-semibold mb-2 text-sm tracking-wider">
+                      INDUSTRIES
+                    </h3>
+                    <a
+                      href="/#emauth"
+                      className="block py-2 px-3 hover:bg-gray-700 rounded-md"
+                    >
+                      Security Industry
+                    </a>
+                    <a
+                      href="https://flickanalytics.in/"
+                      className="block py-2 px-3 hover:bg-gray-700 rounded-md"
+                    >
+                      Film Industry
+                    </a>
+                    <a
+                      href="https://m-analytics-rust.vercel.app/"
+                      className="block py-2 px-3 hover:bg-gray-700 rounded-md"
+                    >
+                      Civil Industry
+                    </a>
+                  </div>
+                </div>
+              )}
             </div>
-            
-            <div>
-              <h3 className="text-purple-400 font-semibold mb-2 text-sm tracking-wider">INDUSTRIES</h3>
-              <a href="/#emauth" className="block py-2 px-3 hover:bg-gray-700 rounded-md">Security Industry</a>
-              <a href="https://flickanalytics.in/" className="block py-2 px-3 hover:bg-gray-700 rounded-md">Film Industry</a>
-              <a href="https://m-analytics-rust.vercel.app/" className="block py-2 px-3 hover:bg-gray-700 rounded-md">Civil Industry</a>
+
+            {/* Solutions dropdown for mobile */}
+            <div className="rounded-lg overflow-hidden">
+              <button
+                onClick={() => toggleMobileDropdown("solutions")}
+                className="flex w-full justify-between items-center p-4 bg-gray-800 bg-opacity-60 rounded-t-lg"
+              >
+                <div className="flex items-center">
+                  <BrainCircuit className="mr-3 h-5 w-5 text-purple-400" />
+                  <span className="text-lg font-semibold">Solutions</span>
+                </div>
+                <ChevronDown
+                  className={`h-5 w-5 text-purple-400 transform transition-transform duration-300 ${
+                    mobileDropdowns.solutions ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+
+              {mobileDropdowns.solutions && (
+                <div className="bg-gray-800 bg-opacity-40 p-4 rounded-b-lg space-y-4">
+                  <div>
+                    <h3 className="text-purple-400 font-semibold mb-2 text-sm tracking-wider">
+                      ARTIFICIAL INTELLIGENCE
+                    </h3>
+                    <a
+                      href="/#behaviour"
+                      className="block py-2 px-3 hover:bg-gray-700 rounded-md"
+                    >
+                      Behavioural Biometrics
+                    </a>
+                    <a
+                      href="https://facetracker.indominuslabs.in/"
+                      className="block py-2 px-3 hover:bg-gray-700 rounded-md"
+                    >
+                      Face & Eye Tracking
+                    </a>
+                  </div>
+
+                  <div>
+                    <h3 className="text-purple-400 font-semibold mb-2 text-sm tracking-wider">
+                      SECURITY
+                    </h3>
+                    <a
+                      href="/#emauth"
+                      className="block py-2 px-3 hover:bg-gray-700 rounded-md"
+                    >
+                      Password-less Authentication
+                    </a>
+                    <a
+                      href="/#emauth"
+                      className="block py-2 px-3 hover:bg-gray-700 rounded-md"
+                    >
+                      Multifactor Authentication
+                    </a>
+                  </div>
+
+                  <div>
+                    <h3 className="text-purple-400 font-semibold mb-2 text-sm tracking-wider">
+                      ANALYTICAL
+                    </h3>
+                    <a
+                      href="https://flickanalytics.in/"
+                      className="block py-2 px-3 hover:bg-gray-700 rounded-md"
+                    >
+                      Film Production Automation
+                    </a>
+                    <a
+                      href="https://m-analytics-rust.vercel.app/"
+                      className="block py-2 px-3 hover:bg-gray-700 rounded-md"
+                    >
+                      Civil Site Automation
+                    </a>
+                  </div>
+                </div>
+              )}
             </div>
-          </div>
-        )}
-      </div>
-      
-      {/* Solutions dropdown for mobile */}
-      <div className="rounded-lg overflow-hidden">
-        <button 
-          onClick={() => toggleMobileDropdown('solutions')}
-          className="flex w-full justify-between items-center p-4 bg-gray-800 bg-opacity-60 rounded-t-lg"
-        >
-          <div className="flex items-center">
-            <BrainCircuit className="mr-3 h-5 w-5 text-purple-400" />
-            <span className="text-lg font-semibold">Solutions</span>
-          </div>
-          <ChevronDown 
-            className={`h-5 w-5 text-purple-400 transform transition-transform duration-300 ${mobileDropdowns.solutions ? 'rotate-180' : ''}`} 
-          />
-        </button>
-        
-        {mobileDropdowns.solutions && (
-          <div className="bg-gray-800 bg-opacity-30 p-4 rounded-b-lg space-y-4">
-            <div>
-              <h3 className="text-purple-400 font-semibold mb-2 text-sm tracking-wider">ARTIFICIAL INTELLIGENCE</h3>
-              <a href="/#behaviour" className="block py-2 px-3 hover:bg-gray-700 rounded-md">Behavioural Biometrics</a>
-              <a href="https://facetracker.indominuslabs.in/" className="block py-2 px-3 hover:bg-gray-700 rounded-md">Face & Eye Tracking</a>
+
+            {/* Company dropdown for mobile */}
+            <div className="rounded-lg overflow-hidden">
+              <button
+                onClick={() => toggleMobileDropdown("company")}
+                className="flex w-full justify-between items-center p-4 bg-gray-800 bg-opacity-60 rounded-t-lg"
+              >
+                <div className="flex items-center">
+                  <Lightbulb className="mr-3 h-5 w-5 text-purple-400" />
+                  <span className="text-lg font-semibold">Company</span>
+                </div>
+                <ChevronDown
+                  className={`h-5 w-5 text-purple-400 transform transition-transform duration-300 ${
+                    mobileDropdowns.company ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+
+              {mobileDropdowns.company && (
+                <div className="bg-gray-800 bg-opacity-40 p-4 rounded-b-lg space-y-4">
+                  <div>
+                    <h3 className="text-purple-400 font-semibold mb-2 text-sm tracking-wider">
+                      OVERVIEW
+                    </h3>
+                    <a
+                      href="/about"
+                      className="block py-2 px-3 hover:bg-gray-700 rounded-md"
+                    >
+                      About Us
+                    </a>
+                    <a
+                      href="#"
+                      className="block py-2 px-3 hover:bg-gray-700 rounded-md"
+                    >
+                      Artificial Intelligence
+                    </a>
+                  </div>
+
+                  <div>
+                    <h3 className="text-purple-400 font-semibold mb-2 text-sm tracking-wider">
+                      PRESS
+                    </h3>
+                    <a
+                      href="#"
+                      className="block py-2 px-3 hover:bg-gray-700 rounded-md"
+                    >
+                      Talks Delivered
+                    </a>
+                    <a
+                      href="#"
+                      className="block py-2 px-3 hover:bg-gray-700 rounded-md"
+                    >
+                      Awards & Recognitions
+                    </a>
+                  </div>
+
+                  <div className="pt-4 flex space-x-4">
+                    <a
+                      href="https://www.linkedin.com/company/indominus-labs/"
+                      target="__blank"
+                      className="p-2 bg-gray-700 rounded-full hover:bg-purple-600"
+                    >
+                      <svg
+                        className="h-5 w-5"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                      </svg>
+                    </a>
+                    <a
+                      href="https://github.com/indominus-labs/"
+                      target="__blank"
+                      className="p-2 bg-gray-700 rounded-full hover:bg-purple-600"
+                    >
+                      <svg
+                        className="h-5 w-5"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M12 0C5.372 0 0 5.372 0 12c0 5.303 3.438 9.801 8.205 11.401.6.111.82-.26.82-.577v-2.019c-3.338.727-4.034-1.607-4.034-1.607-.55-1.4-1.344-1.774-1.344-1.774-1.098-.752.083-.737.083-.737 1.213.085 1.853 1.246 1.853 1.246 1.077 1.844 2.822 1.31 3.51.999.109-.783.42-1.31.765-1.61-2.665-.3-5.467-1.332-5.467-5.934 0-1.31.47-2.38 1.247-3.22-.125-.303-.543-.855.127-1.769 0 0 1.022-.333 3.345 1.264.974-.271 2.016-.405 3.042-.409 1.027.004 2.069.138 3.042.409 2.322-1.596 3.345-1.264 3.345-1.264.67.914.252 1.466.127 1.769.777.84 1.247 1.91 1.247 3.22 0 4.607-2.807 5.63-5.481 5.927.431.368.816 1.095.816 2.21v3.278c0 .317.219.689.826.576C20.562 21.8 24 17.303 24 12c0-6.628-5.372-12-12-12z" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              )}
             </div>
-            
-            <div>
-              <h3 className="text-purple-400 font-semibold mb-2 text-sm tracking-wider">SECURITY</h3>
-              <a href="/#emauth" className="block py-2 px-3 hover:bg-gray-700 rounded-md">Password-less Authentication</a>
-              <a href="/#emauth" className="block py-2 px-3 hover:bg-gray-700 rounded-md">Multifactor Authentication</a>
-            </div>
-            
-            <div>
-              <h3 className="text-purple-400 font-semibold mb-2 text-sm tracking-wider">ANALYTICAL</h3>
-              <a href="https://flickanalytics.in/" className="block py-2 px-3 hover:bg-gray-700 rounded-md">Film Production Automation</a>
-              <a href="https://m-analytics-rust.vercel.app/" className="block py-2 px-3 hover:bg-gray-700 rounded-md">Civil Site Automation</a>
-            </div>
-          </div>
-        )}
-      </div>
-      
-      {/* Company dropdown for mobile */}
-      <div className="rounded-lg overflow-hidden">
-        <button 
-          onClick={() => toggleMobileDropdown('company')}
-          className="flex w-full justify-between items-center p-4 bg-gray-800 bg-opacity-60 rounded-t-lg"
-        >
-          <div className="flex items-center">
-            <Lightbulb className="mr-3 h-5 w-5 text-purple-400" />
-            <span className="text-lg font-semibold">Company</span>
-          </div>
-          <ChevronDown 
-            className={`h-5 w-5 text-purple-400 transform transition-transform duration-300 ${mobileDropdowns.company ? 'rotate-180' : ''}`} 
-          />
-        </button>
-        
-        {mobileDropdowns.company && (
-          <div className="bg-gray-800 bg-opacity-30 p-4 rounded-b-lg space-y-4">
-            <div>
-              <h3 className="text-purple-400 font-semibold mb-2 text-sm tracking-wider">OVERVIEW</h3>
-              <a href="/about" className="block py-2 px-3 hover:bg-gray-700 rounded-md">About Us</a>
-              <a href="#" className="block py-2 px-3 hover:bg-gray-700 rounded-md">Artificial Intelligence</a>
-            </div>
-            
-            <div>
-              <h3 className="text-purple-400 font-semibold mb-2 text-sm tracking-wider">PRESS</h3>
-              <a href="#" className="block py-2 px-3 hover:bg-gray-700 rounded-md">Talks Delivered</a>
-              <a href="#" className="block py-2 px-3 hover:bg-gray-700 rounded-md">Awards & Recognitions</a>
-            </div>
-            
-            <div className="pt-4 flex space-x-4">
-              <a href="https://www.linkedin.com/company/indominus-labs/" target="__blank" className="p-2 bg-gray-700 rounded-full hover:bg-purple-600">
-                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                </svg>
-              </a>
-              <a href="https://github.com/indominus-labs/" target="__blank" className="p-2 bg-gray-700 rounded-full hover:bg-purple-600">
-                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 0C5.372 0 0 5.372 0 12c0 5.303 3.438 9.801 8.205 11.401.6.111.82-.26.82-.577v-2.019c-3.338.727-4.034-1.607-4.034-1.607-.55-1.4-1.344-1.774-1.344-1.774-1.098-.752.083-.737.083-.737 1.213.085 1.853 1.246 1.853 1.246 1.077 1.844 2.822 1.31 3.51.999.109-.783.42-1.31.765-1.61-2.665-.3-5.467-1.332-5.467-5.934 0-1.31.47-2.38 1.247-3.22-.125-.303-.543-.855.127-1.769 0 0 1.022-.333 3.345 1.264.974-.271 2.016-.405 3.042-.409 1.027.004 2.069.138 3.042.409 2.322-1.596 3.345-1.264 3.345-1.264.67.914.252 1.466.127 1.769.777.84 1.247 1.91 1.247 3.22 0 4.607-2.807 5.63-5.481 5.927.431.368.816 1.095.816 2.21v3.278c0 .317.219.689.826.576C20.562 21.8 24 17.303 24 12c0-6.628-5.372-12-12-12z" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        )}
-      </div>
-      
-      {/* Contact Us button */}
-      <div className="wrapper">
+
+            {/* Contact Us button */}
+            <div className="wrapper">
               <Link className="cta" to="/scheduledemo">
                 <span className="cta-text">CONTACT US</span>
                 <span className="cta-arrow">
@@ -822,9 +948,9 @@ const Navbar = () => {
                 </span>
               </Link>
             </div>
-    </div>
-  </div>
-)}
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
