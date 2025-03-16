@@ -58,6 +58,21 @@ const Navbar = () => {
     setActiveDropdown(null);
   };
 
+  // Add this state to track which mobile dropdowns are open
+  const [mobileDropdowns, setMobileDropdowns] = useState({
+    products: false,
+    solutions: false,
+    company: false,
+  });
+
+  // Add a function to toggle mobile dropdowns
+  const toggleMobileDropdown = (dropdown) => {
+    setMobileDropdowns({
+      ...mobileDropdowns,
+      [dropdown]: !mobileDropdowns[dropdown],
+    });
+  };
+
   const dropdownContent = {
     products: (
       <div className="flex absolute left-0 top-full w-[1000px] shadow-lg rounded-b-md">
@@ -391,15 +406,6 @@ const Navbar = () => {
               </ul>
             </div>
           </div>
-
-          {/* <div className="mt-6 pt-4 border-t border-gray-400 absolute bottom-5 w-[645px]">
-            <a
-              href="/#behaviour"
-              className="text-purple-400 hover:text-purple-300 font-medium flex items-center"
-            >
-              View All Solutions
-            </a>
-          </div> */}
         </div>
       </div>
     ),
@@ -450,38 +456,6 @@ const Navbar = () => {
                 </svg>
               </a>
             </div>
-
-            {/* Divider Text */}
-            {/* <p className="text-sm text-gray-400 font-medium mb-4">
-              MORE FROM SPLUNK
-            </p> */}
-
-            {/* Links */}
-            {/* <div className="space-y-4">
-              <a
-                href="#pricing"
-                className="flex items-center text-gray-300 hover:text-purple-700 font-medium"
-              >
-                <Tag className="mr-3 h-5 w-5 text-gray-300" />
-                <span>Pricing</span>
-              </a>
-
-              <a
-                href="#free-trials"
-                className="flex items-center text-gray-300 hover:text-purple-700 font-medium"
-              >
-                <FileDown className="mr-3 h-5 w-5 text-gray-300" />
-                <span>Free Trials & Downloads</span>
-              </a>
-
-              <a
-                href="#product-tours"
-                className="flex items-center text-gray-300 hover:text-purple-700 font-medium"
-              >
-                <MonitorSmartphone className="mr-3 h-5 w-5 text-gray-300" />
-                <span>Product Tours</span>
-              </a>
-            </div> */}
           </div>
         </div>
         <div
@@ -512,28 +486,7 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-            {/* <div className="col-span-1">
-              <h3 className="text-lg font-semibold mb-4 text-white">
-                Technologies
-              </h3>
-              <ul className="space-y-3">
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white">
-                    AWS
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white">
-                    Azure
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white">
-                    GCP
-                  </a>
-                </li>
-              </ul>
-            </div> */}
+
             <div className="col-span-2">
               <h3 className="text-md font-semibold mb-4 text-white">PRESS</h3>
               <ul className="space-y-4">
@@ -553,18 +506,13 @@ const Navbar = () => {
                     Awards & Recognitions
                   </a>
                 </li>
-                {/* <li>
-                  <a href="#" className="text-gray-300 hover:text-white">
-                    Retail
-                  </a>
-                </li> */}
               </ul>
             </div>
           </div>
 
           <div className="mt-6 pt-4 border-t border-gray-400 absolute bottom-5 w-[645px]">
             <Link
-              to="/scheduledemo" 
+              to="/scheduledemo"
               className="text-purple-400 hover:text-purple-300 font-medium flex items-center"
             >
               Contact Us
@@ -595,7 +543,7 @@ const Navbar = () => {
               </div>
             </div>
             <div
-              className="relative"
+              className="relative hidden lg:block"
               onMouseEnter={() => handleMouseEnter("products")}
               onMouseLeave={handleMouseLeave}
             >
@@ -608,7 +556,7 @@ const Navbar = () => {
               {activeDropdown === "products" && dropdownContent.products}
             </div>
             <div
-              className="relative"
+              className="relative hidden lg:block"
               onMouseEnter={() => handleMouseEnter("solutions")}
               onMouseLeave={handleMouseLeave}
             >
@@ -621,7 +569,7 @@ const Navbar = () => {
               {activeDropdown === "solutions" && dropdownContent.solutions}
             </div>
             <div
-              className="relative"
+              className="relative hidden lg:block"
               onMouseEnter={() => handleMouseEnter("company")}
               onMouseLeave={handleMouseLeave}
             >
@@ -693,33 +641,156 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu HAAALLLOOOOOOOOO */}
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {/* <a
-              href="/"
-              onClick={handleHomeClick}
-              className="block px-3 py-2 "
-            >
-              Home
-            </a> */}
-            <a
-              href="/#products"
-              onClick={handleProductsClick}
-              className="block px-3 py-2 "
-            >
-              Products
-            </a>
-            <a href="/#contact" className="block px-3 py-2 ">
-              Contact Us
-            </a>
-            {/* <button 
-              onClick={() => navigate('/schedule-demo')}
-              className="w-full mt-2 bg-gradient-to-r from-[#9E54FB] to-[#8331E8] text-white px-6 py-2 rounded-full hover:from-[#8331E8] hover:to-[#9E54FB] transition-all shadow"
-            >
-              Schedule Demo
-            </button> */}
+            {/* Products dropdown for mobile */}
+            <div className="py-2">
+              <button
+                onClick={() => toggleMobileDropdown("products")}
+                className="flex w-full justify-between items-center py-2 text-base font-medium"
+              >
+                Products
+                <ChevronDown
+                  className={`h-5 w-5 transform ${
+                    mobileDropdowns.products ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+
+              {mobileDropdowns.products && (
+                <div className="pl-4 pt-2 space-y-2">
+                  <h3 className="font-medium text-sm pt-2">SECURITY</h3>
+                  <a href="/#emauth" className="block py-1 text-gray-300">
+                    Em Auth
+                  </a>
+
+                  <h3 className="font-medium text-sm pt-2">ANALYTICS</h3>
+                  <a
+                    href="https://m-analytics-rust.vercel.app"
+                    className="block py-1 text-gray-300"
+                  >
+                    Em metrices
+                  </a>
+                  <a href="https://flickanalytics.in" className="block py-1 text-gray-300">
+                    Flick Analytics
+                  </a>
+
+                  <h3 className="font-medium text-sm pt-2">INDUSTRIES</h3>
+                  <a href="/#emauth" className="block py-1 text-gray-300">
+                    Security Industry
+                  </a>
+                  <a href="https://flickanalytics.in/" className="block py-1 text-gray-300">
+                    Film Industry
+                  </a>
+                  <a
+                    href="https://m-analytics-rust.vercel.app/"
+                    className="block py-1 text-gray-300"
+                  >
+                    Civil Industry
+                  </a>
+                </div>
+              )}
+            </div>
+
+            {/* Solutions dropdown for mobile */}
+            <div className="py-2">
+              <button
+                onClick={() => toggleMobileDropdown("solutions")}
+                className="flex w-full justify-between items-center py-2 text-base font-medium"
+              >
+                Solutions
+                <ChevronDown
+                  className={`h-5 w-5 transform ${
+                    mobileDropdowns.solutions ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+
+              {mobileDropdowns.solutions && (
+                <div className="pl-4 pt-2 space-y-2">
+                  <h3 className="font-medium text-sm pt-2 font-semibold">
+                    ARTIFICIAL INTELLIGENCE
+                  </h3>
+                  <a href="/#behaviour" className="block py-1 text-gray-300 ">
+                    Behavioural Biometrics
+                  </a>
+                  <a
+                    href="https://facetracker.indominuslabs.in/"
+                    className="block py-1 text-gray-300 "
+                  >
+                    Face & Eye Tracking
+                  </a>
+
+                  <h3 className="font-medium text-sm pt-2 font-semibold">
+                    SECURITY
+                  </h3>
+                  <a href="/#emauth" className="block py-1 text-gray-300 ">
+                    Password-less Authentication
+                  </a>
+                  <a href="/#emauth" className="block py-1 text-gray-300 ">
+                    Multifactor Authentication
+                  </a>
+
+                  <h3 className="font-medium text-sm pt-2 font-semibold">
+                    ANALYTICAL
+                  </h3>
+                  <a
+                    href="https://flickanalytics.in/"
+                    className="block py-1 text-gray-300 "
+                  >
+                    Film Production Automation
+                  </a>
+                  <a
+                    href="https://m-analytics-rust.vercel.app/"
+                    className="block py-1 text-gray-300 "
+                  >
+                    Civil Site Automation
+                  </a>
+                </div>
+              )}
+            </div>
+
+            {/* Company dropdown for mobile */}
+            <div className="py-2">
+              <button
+                onClick={() => toggleMobileDropdown("company")}
+                className="flex w-full justify-between items-center py-2 text-base font-medium"
+              >
+                Company
+                <ChevronDown
+                  className={`h-5 w-5 transform ${
+                    mobileDropdowns.company ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+
+              {mobileDropdowns.company && (
+                <div className="pl-4 pt-2 space-y-2">
+                  <h3 className="font-medium text-sm font-semibold pt-2">
+                    OVERVIEW
+                  </h3>
+                  <a href="/about" className="block py-1 text-gray-300">
+                    About Us
+                  </a>
+                  <a href="#" className="block py-1 text-gray-300">
+                    Artificial Intelligence
+                  </a>
+
+                  <h3 className="font-medium text-sm pt-2 font-semibold">
+                    PRESS
+                  </h3>
+                  <a href="#" className="block py-1 text-gray-300">
+                    Talks Delivered
+                  </a>
+                  <a href="#" className="block py-1 text-gray-300">
+                    Awards & Recognitions
+                  </a>
+                </div>
+              )}
+            </div>
+
             <div className="wrapper">
               <Link className="cta" to="/scheduledemo">
                 <span className="cta-text">CONTACT US</span>
