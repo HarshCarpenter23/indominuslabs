@@ -211,7 +211,7 @@ const Navbar = () => {
             </div>
             <div className="col-span-1">
               <h3 className="text-md font-semibold mb-4 text-white">
-                INDUSTRIES
+                DOMAINS
               </h3>
               <ul className="space-y-4">
                 <li>
@@ -481,7 +481,7 @@ const Navbar = () => {
                     href="#"
                     className="text-gray-300 hover:text-white text-md font-medium hover-underline"
                   >
-                    Artificial Intelligence
+                    Carrers
                   </a>
                 </li>
               </ul>
@@ -722,13 +722,13 @@ const Navbar = () => {
 
                   <div>
                     <h3 className="text-purple-400 font-semibold mb-2 text-sm tracking-wider">
-                      INDUSTRIES
+                      DOMAINS
                     </h3>
                     <a
                       href="/#emauth"
                       className="block py-2 px-3 hover:bg-gray-700 rounded-md"
                     >
-                      Security Industry
+                      Security
                     </a>
                     <a
                       href="https://flickanalytics.in/"
@@ -856,7 +856,7 @@ const Navbar = () => {
                       href="#"
                       className="block py-2 px-3 hover:bg-gray-700 rounded-md"
                     >
-                      Artificial Intelligence
+                      Carrers
                     </a>
                   </div>
 
