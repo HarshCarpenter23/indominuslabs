@@ -13,6 +13,9 @@ import EMauth from './components/EMauth';
 import BehaviouralBiometrics from './components/BehaviouralBiometrics';
 import About from './components/AboutUs';
 // import HowItWorks from './components/HowItWorks';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 // Create a MainLayout component to hold all components except ScheduleDemo
 const MainLayout = () => {
@@ -36,6 +39,7 @@ const MainLayout = () => {
 function App() {
   return (
     <Router>
+      <ToastContainer />
       <Routes>
         {/* Main landing page route */}
         <Route path="/" element={<MainLayout />} />

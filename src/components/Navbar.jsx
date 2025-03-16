@@ -219,7 +219,7 @@ const Navbar = () => {
                     href="/#emauth"
                     className="hover-underline text-gray-300 hover:text-white text-md font-medium"
                   >
-                    Security Industry
+                    Security
                   </a>
                 </li>
                 <li>
@@ -227,7 +227,7 @@ const Navbar = () => {
                     href="https://flickanalytics.in/"
                     className="hover-underline text-gray-300 hover:text-white text-md font-medium"
                   >
-                    Film Industry
+                    Movie
                   </a>
                 </li>
                 <li>
@@ -235,7 +235,7 @@ const Navbar = () => {
                     href="https://m-analytics-rust.vercel.app/"
                     className="hover-underline text-gray-300 hover:text-white text-md font-medium"
                   >
-                    Civil Industry
+                    Civil
                   </a>
                 </li>
               </ul>
@@ -734,13 +734,13 @@ const Navbar = () => {
                       href="https://flickanalytics.in/"
                       className="block py-2 px-3 hover:bg-gray-700 rounded-md"
                     >
-                      Film Industry
+                      Movie
                     </a>
                     <a
                       href="https://m-analytics-rust.vercel.app/"
                       className="block py-2 px-3 hover:bg-gray-700 rounded-md"
                     >
-                      Civil Industry
+                      Civil
                     </a>
                   </div>
                 </div>

@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import { Mail, User, Phone, MessageSquare, Send } from "lucide-react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
+import emailjs from "@emailjs/browser";
+
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const ScheduleDemo = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -10,9 +15,58 @@ const ScheduleDemo = () => {
     message: "",
   });
 
+  // Function to trigger toast
+  const notifySuccess = () => {
+    toast.success("Email sent successfully!", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      theme: "light",
+    });
+  };
+
+  const notifyError = () => {
+    toast.error("Failed to send email. Try again!", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      theme: "colored",
+    });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    emailjs
+      .send(
+        "service_cl6mmgu", // Replace with your EmailJS service ID
+        "template_a9y1sxf", // Replace with your EmailJS template ID
+        formData,
+        "ICHPH8BHOF4aWo7nM" // Replace with your EmailJS public key
+      )
+      .then(
+        (response) => {
+          // console.log("Email sent successfully!", response.status, response.text);
+          // alert("Your message has been sent!");
+          notifySuccess();
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            message: "",
+          });
+        },
+        (error) => {
+          // console.log("Failed to send email:", error);
+          // alert("Failed to send message. Please try again.");
+          notifyError();
+        }
+      );
   };
 
   const handleChange = (e) => {
@@ -127,68 +181,68 @@ const ScheduleDemo = () => {
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 py-12 px-6  ">
-        {/* Office Section */}
-        <div className="border-b-2 border-indigo-500 pb-6">
-          <h3 className="text-xl font-semibold text-white flex items-center gap-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 text-indigo-500"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-              />
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-              />
-            </svg>
-            Our Offices
-          </h3>
-          <div className="mt-4 space-y-2">
-            <p className="font-bold text-white">AIR, VIT - AP</p>
-            <p className="text-gray-300">VIT-AP Central Block</p>
-            <p className="text-gray-300">Amravathi, Andhra Pradesh 522237</p>
-          </div>
-        </div>
-
-        {/* Email Section */}
-        <div className="border-b-2 border-orange-400 pb-6">
-          <h3 className="text-xl font-semibold text-white flex items-center gap-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 text-orange-400"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-              />
-            </svg>
-            Email Us
-          </h3>
-          <div className="flex flex-col sm:flex-row justify-between mt-4 gap-6">
-            <div className="flex-1">
-              <p className="font-bold text-white">Careers</p>
-              <a
-                href="mailto:careers@indominuslabs.in"
-                className="text-teal-400 hover:text-teal-300 transition-colors"
+          {/* Office Section */}
+          <div className="border-b-2 border-indigo-500 pb-6">
+            <h3 className="text-xl font-semibold text-white flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-indigo-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
-                careers@indominuslabs.in
-              </a>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+              Our Offices
+            </h3>
+            <div className="mt-4 space-y-2">
+              <p className="font-bold text-white">AIR, VIT - AP</p>
+              <p className="text-gray-300">VIT-AP Central Block</p>
+              <p className="text-gray-300">Amravathi, Andhra Pradesh 522237</p>
             </div>
-            <div className="flex-1">
+          </div>
+
+          {/* Email Section */}
+          <div className="border-b-2 border-orange-400 pb-6">
+            <h3 className="text-xl font-semibold text-white flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-orange-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+              Email Us
+            </h3>
+            <div className="flex flex-col sm:flex-row justify-between mt-4 gap-6">
+              <div className="flex-1">
+                <p className="font-bold text-white">Contact</p>
+                <a
+                  href="mailto:careers@indominuslabs.in"
+                  className="text-teal-400 hover:text-teal-300 transition-colors"
+                >
+                  contact@indominuslabs.in
+                </a>
+              </div>
+              {/* <div className="flex-1">
               <p className="font-bold text-white">Founder</p>
               <a
                 href="mailto:sibi@indominuslabs.in"
@@ -196,12 +250,11 @@ const ScheduleDemo = () => {
               >
                 sibi@indominuslabs.in
               </a>
+            </div> */}
             </div>
           </div>
         </div>
       </div>
-      </div>
-      
     </>
   );
 };
