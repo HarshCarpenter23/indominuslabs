@@ -865,7 +865,7 @@ const Navbar = () => {
                       PRESS
                     </h3>
                     <a
-                      href="/talkawards"
+                      href="/talksawards"
                       className="block py-2 px-3 hover:bg-gray-700 rounded-md"
                     >
                       Talks Delivered
