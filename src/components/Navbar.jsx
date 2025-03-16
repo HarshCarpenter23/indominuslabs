@@ -865,13 +865,13 @@ const Navbar = () => {
                       PRESS
                     </h3>
                     <a
-                      href="#"
+                      href="/talkawards"
                       className="block py-2 px-3 hover:bg-gray-700 rounded-md"
                     >
                       Talks Delivered
                     </a>
                     <a
-                      href="#"
+                      href="/talksawards"
                       className="block py-2 px-3 hover:bg-gray-700 rounded-md"
                     >
                       Awards & Recognitions
