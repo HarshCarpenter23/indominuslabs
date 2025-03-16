@@ -15,6 +15,7 @@ import About from './components/AboutUs';
 // import HowItWorks from './components/HowItWorks';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import TalksAndAwardsPage from './components/Talks';
 
 
 // Create a MainLayout component to hold all components except ScheduleDemo
@@ -61,6 +62,16 @@ function App() {
             <>
               <Navbar />
               <About />
+              <Footer />
+            </>
+          } 
+        />
+        <Route 
+          path="/talksawards" 
+          element={
+            <>
+              <Navbar />
+              <TalksAndAwardsPage />
               <Footer />
             </>
           } 

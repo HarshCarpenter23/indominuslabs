@@ -25,7 +25,7 @@ const EMauth = () => {
               </h2>
               <p className="mt-4 text-gray-300 text-lg leading-relaxed">
                 Experience seamless security. Say goodbye to passwords and hello
-                to a safer digital life with Digital Fortress.
+                to a safer digital life.
               </p>
               {/* <div className='flex gap-11  items-end'>
               <Image

@@ -481,7 +481,7 @@ const Navbar = () => {
                     href="#"
                     className="text-gray-300 hover:text-white text-md font-medium hover-underline"
                   >
-                    Carrers
+                    Careers
                   </a>
                 </li>
               </ul>
@@ -492,7 +492,7 @@ const Navbar = () => {
               <ul className="space-y-4">
                 <li>
                   <a
-                    href="#"
+                    href="/talksawards"
                     className="text-gray-300 hover:text-white text-md font-medium hover-underline"
                   >
                     Talks Delivered
@@ -500,7 +500,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/talksawards"
                     className="text-gray-300 hover:text-white text-md font-medium hover-underline"
                   >
                     Awards & Recognitions
@@ -856,7 +856,7 @@ const Navbar = () => {
                       href="#"
                       className="block py-2 px-3 hover:bg-gray-700 rounded-md"
                     >
-                      Carrers
+                      Careers
                     </a>
                   </div>
 
